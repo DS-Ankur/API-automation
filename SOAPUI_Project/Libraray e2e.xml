@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ef923fba-33e0-4514-b38c-70567b4d8d1e" activeEnvironment="Default" name="E2E soap and rest" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="b92ca203-1cfb-4966-a0c2-28e80bb6cdba" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://216.10.245.166" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>${#TestSuite#endpoint}</con:endpoint><con:endpoint>http://216.10.245.166</con:endpoint></con:endpoints><con:resource name="Addbook.php" path="/Library/Addbook.php" id="7226a67d-8889-4a90-98c5-c262814f03bb"><con:settings/><con:parameters/><con:method name="Method 1" id="d08ddb3b-7de0-4d62-8518-358a0667147f" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:add="http://216.10.245.166/Library/Addbook.php">add:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:add="http://216.10.245.166/Library/Addbook.php">add:Response</con:element></con:representation><con:request name="Request 1" id="a2c47dd3-5a19-4896-a858-af4dfc830005" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request>{
+
+"name":"John Jim Automation with Java",
+"isbn":"sam 3",
+"aisle":"25",
+"author":"John Jim"
+}
+ 
+</con:request><con:originalUri>http://216.10.245.166/Library/Addbook.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="GetBook.php" path="/Library/GetBook.php" id="7987f7b8-cff8-4f7f-993d-8f8fde6e10de"><con:settings/><con:parameters><con:parameter><con:name>AuthorName</con:name><con:value>John foe</con:value><con:style>QUERY</con:style><con:default>John foe</con:default></con:parameter></con:parameters><con:method name="Method 1" id="19cd0ef1-32f9-451a-81ea-215f2c3fb63b" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="7abd864f-51c4-48ed-8f6b-dd9383873b33" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request/><con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>AuthorName</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="GetBook.php" path="/Library/GetBook.php" id="2641dbe2-c1a3-4093-9c0e-3c725fb487e9"><con:settings/><con:parameters><con:parameter><con:name>ID</con:name><con:value>3389 </con:value><con:style>QUERY</con:style><con:default>3389 </con:default></con:parameter></con:parameters><con:method name="Method 1" id="9d0d4588-1e0e-4e49-a5e9-e0ca18acf953" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:get="http://216.10.245.166/Library/GetBook.php">get:Fault</con:element></con:representation><con:request name="Request 1" id="d74d15f8-92f1-4408-9e2c-70bb935a822a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request/><con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ID" value="sam 325" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ID</con:entry><con:entry/></con:parameterOrder></con:request></con:method></con:resource><con:resource name="DeleteBook.php" path="/Library/DeleteBook.php" id="8617f4d4-387c-45c2-8d82-14105fb96882"><con:settings/><con:parameters/><con:method name="Method 1" id="d749e925-07b7-4755-ac73-98e72e21a55a" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:del="http://216.10.245.166/Library/DeleteBook.php">del:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:del="http://216.10.245.166/Library/DeleteBook.php">del:Fault</con:element></con:representation><con:request name="Request 1" id="25a70e5f-9d46-48aa-a03d-ecfb8db3590c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request>{
+ 
+"ID" : "sam 325"
+ 
+} 
+</con:request><con:originalUri>http://216.10.245.166/Library/DeleteBook.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="03d92606-5eb6-473c-9d43-d8dd72dfc34c" wsaVersion="NONE" name="EmployeeManagementServiceSoap12Binding" type="wsdl" bindingName="{http://sample.com/reservation/guest}EmployeeManagementServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8082/axis2/services/EmployeeManagementService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT"/><con:endpoints><con:endpoint>http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="65ff962b-449d-4e17-8605-44ab6009254b" isOneWay="false" action="urn:addEmployee" name="addEmployee" bindingOperationName="addEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="74ce3e29-fb66-418b-8362-907302dffb85" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:addEmployee>\r
+         <!--Optional:-->\r
+         <typ:name>?</typ:name>\r
+         <!--Optional:-->\r
+         <typ:id>?</typ:id>\r
+         <!--Optional:-->\r
+         <typ:Department>?</typ:Department>\r
+         <!--Optional:-->\r
+         <typ:age>?</typ:age>\r
+      </typ:addEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addEmployee"/></con:call></con:operation><con:operation id="aab08326-069f-4f4e-b30e-a70b7d613d87" isOneWay="false" action="urn:deleteEmployee" name="deleteEmployee" bindingOperationName="deleteEmployee" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="35fc5387-eceb-41c7-9338-ba488af8b3b7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:deleteEmployee>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:deleteEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:deleteEmployee"/></con:call></con:operation><con:operation id="f7d4f345-a487-44f4-ab0d-2828bed5f6c4" isOneWay="false" action="urn:getEmployeeDetails" name="getEmployeeDetails" bindingOperationName="getEmployeeDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2fb3bd39-ea36-4f4e-8640-d0d656a77f86" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:getEmployeeDetails>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:getEmployeeDetails>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getEmployeeDetails"/></con:call></con:operation></con:interface><con:testSuite id="74a4bcec-1828-477c-ba51-5d33fd001bb8" name="Rest"><con:description>TestSuite generated for REST Service [http://216.10.245.166]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="713dd653-b732-404e-a3e6-d49a8d1de975" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddbookTestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [Addbook.php] located at [/Library/Addbook.php]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="f83b99a5-4b0d-4795-beb8-7f7d3a2f5753"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/Library/Addbook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="a2c47dd3-5a19-4896-a858-af4dfc830005" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#TestSuite#endpoint}</con:endpoint><con:request>{
+
+"name":"John Jimmmy Automation with Java",
+"isbn":"sam 30",
+"aisle":"325",
+"author":"${#TestSuite#author}"
+}
+ 
+</con:request><con:originalUri>http://216.10.245.166/Library/Addbook.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="4c324683-c456-43da-8075-988c86dbc2a8"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>id</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Request 1</con:sourceStep><con:sourcePath>ID</con:sourcePath><con:targetType>ID</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c9221af-e46b-4f0a-8ef8-b930f94314a0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBook.php TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetBook.php] located at [/Library/GetBook.php]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="adf25583-8a4c-4be1-8ee7-a845af93bf53"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/Library/GetBook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="7abd864f-51c4-48ed-8f6b-dd9383873b33" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://216.10.245.166</con:endpoint><con:request/><con:originalUri>http://216.10.245.166/Library/GetBook.php</con:originalUri><con:assertion type="GroovyScriptAssertion" id="4999d5f0-7d1d-4f72-b48b-3ddba4f0b5b3" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+boolean flag;
+//Grab the response from the API
+def response=messageExchange.response.responseContent;
+
+def json1=new JsonSlurper().parseText(response);
+
+for(int i=0;i&lt;3;i++)
+{
+	if(json1.isbn[i] =="sam 30")
+	{
+		flag=true;
+	}
+}
+assert true ==flag</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="AuthorName" value="${#TestSuite#author}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>AuthorName</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="79920423-1505-4be0-960a-dd3f59bb1023" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeleteBook.php TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [DeleteBook.php] located at [/Library/DeleteBook.php]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="fe6e5c2e-6c83-4d75-9792-38530f1b2226"><con:settings/><con:config service="http://216.10.245.166" resourcePath="/Library/DeleteBook.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="25a70e5f-9d46-48aa-a03d-ecfb8db3590c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#TestSuite#endpoint}</con:endpoint><con:request>{
+ 
+"ID" : "${#TestSuite#ID} "
+ 
+} 
+</con:request><con:originalUri>http://216.10.245.166/Library/DeleteBook.php</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>endpoint</con:name><con:value>http://216.10.245.166</con:value></con:property><con:property><con:name>author</con:name><con:value>John Jim</con:value></con:property><con:property><con:name>ID</con:name><con:value>sam 30325</con:value></con:property></con:properties></con:testSuite><con:testSuite id="33820abf-19bd-4ef6-806f-14927dc7d0b6" name="E2E Testing soap"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8e186fa6-9a58-444d-a2b4-246d06e3cfde" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="Add" id="b03281ce-b404-4454-9d4a-0df563d4509d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>addEmployee</con:operation><con:request name="Add" id="1185f559-efff-453b-bf71-ea6441e9f233"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+   <soap:Header/>
+   <soap:Body>
+      <typ:addEmployee>
+         <!--Optional:-->
+         <typ:name>${#TestSuite#name}</typ:name>
+         <!--Optional:-->
+         <typ:id>5</typ:id>
+         <!--Optional:-->
+         <typ:Department>IT</typ:Department>
+         <!--Optional:-->
+         <typ:age>18</typ:age>
+      </typ:addEmployee>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="49e3c87a-7329-40f4-8f42-0bc58579c865"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>age</con:name><con:value>18</con:value></con:property><con:property><con:name>name</con:name><con:value>komal</con:value></con:property><con:property><con:name>ID</con:name><con:value>5</con:value></con:property></con:properties></con:testCase><con:testCase id="717c8d7e-4e6f-445a-b0c1-6f0bb06ad59f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="Get" id="810f1764-58f9-4029-a788-b73cdce7a26b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="Get" id="151772a0-2b2c-427d-916b-7c3cb589d795"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+   <soap:Header/>
+   <soap:Body>
+      <typ:getEmployeeDetails>
+         <!--Optional:-->
+         <typ:employeeName>${#TestSuite#name}</typ:employeeName>
+      </typ:getEmployeeDetails>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3a9c91f3-fffe-4f84-9dca-e248f1776e86"/><con:assertion type="XPath Match" id="b540b604-e464-4c0e-87e4-1d69ffd2e012" name="XPath Match"><con:configuration><path>declare namespace soapenv='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns='http://sample.com/reservation/guest/types';
+declare namespace ax21='http://exception.reservation.sample.com/xsd';
+//ns:getEmployeeDetailsResponse/ns:return/ns:age</path><content>18</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="68a4756c-91ef-4546-a886-afef8b907408" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def getRes= messageExchange.response.responseContent//used testrunner earlier to capture response property
+ //above is common step for both xml and json 
+ //diff is in the class and the way we travel through the json and xml object 
+ // we use "//" in xml and "." in json 
+ //expected format is same as the value is being taken form TestCase property file
+ // expected format differs in groovy as we generally use testrunner to fetch values 
+ //either from responses prperty file of other test cases or Testcaee property file
+ // if its testcase property file, we can use either context or testrunner in groovy
+  def xmlGetRes = new XmlHolder(getRes)
+  
+ def actual = xmlGetRes.getNodeValue("//ns:name") 
+  def expected=context.getTestCase().getPropertyValue("name")//can only go till testcase level
+
+assert  expected==actual</scriptText></con:configuration></con:assertion><con:assertion type="XPath Match" id="23bfc03c-7bd0-4ee6-9049-634e0180a892" name="XPath Match name manual"><con:configuration><path>declare namespace ns='http://sample.com/reservation/guest/types';
+//ns:name</path><content>${#TestSuite#name}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>name</con:name><con:value>Kamal</con:value></con:property></con:properties></con:testCase><con:testCase id="29238ab5-ddbd-4dde-82ec-58d05d0e6d79" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="3096a66e-0395-4b1d-a60f-2a15fdd82fa6"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
+// run get request and then read response for name, compare(assert) it with testsuite level property name
+// earlier we did the same assertion manually and through script assertion using messageExchange instead of testrunner
+
+
+//Property from diffrenet testCase
+//to access or modify any property we have to come from parent only using testRunner
+
+// you have to start from test step under Script test case and move around accordingly
+
+//log.info testRunner.testCase.testSuite.testCases ["GetEmployee"].getPropertyValue("name")///thisis justto fetch name from custom property
+def actual =  testRunner.testCase.testSuite.getPropertyValue("name")//testsuite level 
+def getReq = testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["Get"].getPropertyValue("Response")
+def xmlGet = new XmlHolder(getReq)
+def expected = xmlGet.getNodeValue("//ns:name") 
+assert actual == expected
+
+
+
+
+//End ignore below
+
+/*
+//Property from same testCase
+log.info testRunner.testCase.getPropertyValue("name")
+log.info context.expand('${#TestCase#name}')  //context variable is used to access and modify the properties of yout test case
+//scope of context lies till test case only
+
+//to set the property
+testRunner.testCase.testSuite.testCases ["AddEmployee"].setPropertyValue("age","18")
+
+//from project level
+def project = testRunner.testCase.testSuite.project
+project.getPropertyValue("gender")
+
+//hit add employee request with properties from testcase level
+//we are updating custom properties of teststep(XML request) --add-- (which cannot be updated like testcase custome property) with 
+//testcase property which we found earlier ---name
+def name = testRunner.testCase.testSuite.getPropertyValue("name")
+//def name = testRunner.testCase.testSuite.testCases ["AddEmployee"].getPropertyValue("name")
+def age = testRunner.testCase.testSuite.testCases ["AddEmployee"].getPropertyValue("age")
+def ID = testRunner.testCase.testSuite.testCases ["AddEmployee"].getPropertyValue("ID")
+def addReq = testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["Add"].getPropertyValue("Request")
+//def getRes= messageExchange.response.responseContent (in case of manual assertion script)
+def xmlAdd = new XmlHolder(addReq)
+xmlAdd.setNodeValue("//typ:addEmployee/typ:name",name)     //XmlAdd.setNodeValue("Xpath","value") 
+xmlAdd.setNodeValue("//typ:addEmployee/typ:age",age) 
+xmlAdd.setNodeValue("//typ:addEmployee/typ:id",ID)
+xmlAdd.setNodeValue("//typ:addEmployee/typ:Department","IT")
+
+def newAddXml= xmlAdd.getXml()
+testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["Add"].setPropertyValue("Request",newAddXml) //to pass values of new created xml
+
+def addTestStep = testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["Add"] //create an object of Add test step in Add Employee
+def contextAddEmployee = new WsdlTestRunContext(addTestStep)//create a new context object and pass on the above created addTseststep object so that
+//this context belongs to AddEmployee test case as context is limited to a test case --basically passing test step to a context object to make it belong to the 
+//the test case to which that test step belongs
+
+addTestStep.run(testRunner,contextAddEmployee) // teststep.run(testRunner,context)--> to run a step we need to objects testrunner and context
+//testRunner is at object level but context is at test case level) 
+//-->learn these 3 above steps less logic here
+
+
+//get employee 
+
+def getReq = testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["Get"].getPropertyValue("Request")
+def xmlGet = new XmlHolder(getReq)
+xmlGet.setNodeValue("//typ:getEmployeeDetails/typ:employeeName",name)/// taking name from add request testcase propert --step 29
+def newGetXml = xmlGet.getXml()
+testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["Get"].setPropertyValue("Request",newGetXml)
+  
+def getTestStep = testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["Get"] //create an object of Add test step in Add Employee
+def contextGetEmployee = new WsdlTestRunContext(getTestStep)
+getTestStep.run(testRunner,contextGetEmployee)
+
+//validation of get request 
+//def getReq = testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["Get"].getPropertyValue("Request")
+
+def nameValueRequest = xmlGet.getNodeValue("//typ:getEmployeeDetails/typ:employeeName")
+
+def getRes = testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["Get"].getPropertyValue("Response")
+def xmlGetRes = new XmlHolder(getRes)
+def nameValueResponse = xmlGetRes.getNodeValue("//ns:name")
+log.info nameValueResponse
+log.info nameValueResponse
+assert nameValueRequest == nameValueResponse
+
+/*
+**************Download the complete project xml code from attachment.********************
+
+
+
+
+
+Below is the Groovy script used in the lectures
+
+
+
+import com.eviware.soapui.support.XmlHolder
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
+
+log.info "Hello this is my first program"
+
+//Context variable is used to access and modify the properties of your testcase
+//rahulonlinetutor@gmail.com
+//scope of context lies in Testcase only!
+
+log.info context.expand('${#TestCase#name}')
+
+log.info context.expand('${#TestCase#age}')
+// To access/modify any property you have to come through its parent only
+//Project->Test Suite -> Test Cases_> TestStep
+log.info testRunner.testCase.testSuite.testCases["GetEmployee"].getPropertyValue("id")
+ testRunner.testCase.testSuite.testCases["GetEmployee"].setPropertyValue("id","123")
+log.info testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("age")
+
+log.info testRunner.testCase.getPropertyValue("dept")
+
+log.info testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Request")
+
+def project=testRunner.testCase.testSuite.project
+project.getPropertyValue("gender")
+
+//Hit Add employee Request with properties from Testcase level.
+
+def addReq=testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"].getPropertyValue("Request")
+def name=testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("name")
+def id=testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("id")
+def age=testRunner.testCase.testSuite.testCases["AddEmployee"].getPropertyValue("age")
+ def xmlAdd= new XmlHolder(addReq) //
+
+ xmlAdd.setNodeValue("//typ:addEmployee/typ:name",name)
+ 
+ xmlAdd.setNodeValue("//typ:addEmployee/typ:id",id)
+  xmlAdd.setNodeValue("//typ:addEmployee/typ:Department","cse")
+   xmlAdd.setNodeValue("//typ:addEmployee/typ:age",age)
+  def newAddXml= xmlAdd.getXml();
+
+  testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"].setPropertyValue("Request",newAddXml)
+  //log.info newAddXml
+ 
+ //call the service-
+ //context of AddEmployee testcase should be passed as Add step which we are trying to run belongs to that Testcase
+
+def addTestStep=testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"]
+def contextAddEmployee= new WsdlTestRunContext(addTestStep);
+ 
+ addTestStep.run(testRunner,contextAddEmployee)
+
+ //Hit GetEmployee and generate response..Validate the response if it have the name which added in our earlier Step
+
+ def getReq=testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Request")
+def getEmpxml= new XmlHolder(getReq)
+ getEmpxml.setNodeValue("//typ:getEmployeeDetails/typ:employeeName",name)
+ def newgetEmpxml=getEmpxml.getXml()
+testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].setPropertyValue("Request",newgetEmpxml)
+
+def getTestStep= testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"];
+
+def contextGetEmployee= new WsdlTestRunContext(getTestStep);
+getTestStep.run(testRunner,contextGetEmployee)
+
+//Validation -
+ def getRes=testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Response")
+ 
+def getEmpRes= new XmlHolder(getRes)
+def Getresponse= getEmpRes.getNodeValue("//ns:name")
+log.info Getresponse
+
+log.info name
+
+assert Getresponse==name
+
+//Delete - 
+
+*/
+
+</script></con:config></con:testStep><con:properties><con:property><con:name>name</con:name><con:value>Troy</con:value></con:property><con:property><con:name>age</con:name><con:value>25</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>name</con:name><con:value>Kamal</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>name</con:name><con:value>mathur</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
